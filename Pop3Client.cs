@@ -177,7 +177,7 @@ namespace S22.Pop3 {
 						if (b == CarriageReturn)
 							continue;
 						if (b == Newline) {
-							return Encoding.ASCII.GetString(mem.ToArray());
+							return Encoding.Default.GetString(mem.ToArray());
 						} else
 							mem.WriteByte(b);
 					}
